@@ -55,14 +55,14 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 /* WRITE YOUR CODE HERE */
 
 let boundary = function(n){
-    if (20 < n <= 100 || n === 400){
+    if (20 < n && n <= 100 || n === 400){
         return true;
     }
     else {
         return false;
     }
 }
-let myBoundary = boundary(500);
+let myBoundary = boundary(60);
 console.log(myBoundary);
 
 
@@ -137,19 +137,50 @@ console.log('<--------------------- Excersize 8--------------->');
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR CODE HERE */
+let upperFirst = function(s) {
 
+    return s[0].toUpperCase() + s.slice(1);
+      };
+   
+let stringResult = upperFirst("why wont this work");
+
+console.log(stringResult); 
+
+
+/* WRITE YOUR CODE HERE */
+console.log('<--------------------- Excersize 9 --------------->');
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+let cutString = function (string) {
+    return string.slice(1,-1)
+ 
+};
 
+let myCutString = cutString("this is a interesting test");
+console.log(myCutString);
+
+// can put string into a an ARRAY. 
+// Then remove letters of array
+// then reconstruct sentance
+
+
+/* WRITE YOUR CODE HERE */
+console.log('<--------------------- Excersize 10 --------------->');
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
+let giveMeRandom = function(n) {
+    
+   return Math.floor(Math.random() * n)
+           };
+let randomNumber = giveMeRandom(10);
+console.log(randomNumber);
+
 /* WRITE YOUR CODE HERE */
+
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
