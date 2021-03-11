@@ -169,9 +169,11 @@ let cutString = function (string) {
 let myCutString = cutString("this is a interesting test");
 console.log(myCutString);
 
-// can put string into a an ARRAY. 
+// put string into a an ARRAY. 
 // Then remove letters of array
-// then reconstruct sentance
+// save into new variable
+// then reconstruct sentance with the newly created variable
+// then consolel log
 
 
 /* WRITE YOUR CODE HERE */
