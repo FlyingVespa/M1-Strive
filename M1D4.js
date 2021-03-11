@@ -40,13 +40,20 @@ console.log('<--------------------- Excersize 3 --------------->');
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
 It should return triple their absolute difference if the given number is greater than 19.
 */
-/*
-let crazyDiff = function(a,b){
-    var myCrazyDiff =  a-b;
-    } if (myCrazyDiff >= a) {
 
+let crazyDiff = function(a,b){
+    let b =19
+    if (b - a >= b){
+       return (b - a) * 3
+    } 
+    else {
+        return (b - a)
     }
-*/
+};
+
+
+  
+
 
 console.log('<--------------------- Excersize 4 --------------->');
 /* EXERCISE 4
