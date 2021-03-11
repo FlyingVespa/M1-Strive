@@ -8,9 +8,8 @@ ASSIGNMENT RULES
 
 /* EXERCISE 1
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
-
-
 */
+
 let area = function(l1,l2){
  return l2 * l1;
 }
@@ -30,8 +29,8 @@ let crazySum = function(x,y){
     else {
         return x+y;
     }
-}
-let myCrazyAnwser = crazySum(3,2)
+};
+let myCrazyAnwser = crazySum(3,2);
 console.log(myCrazyAnwser);
 
 
@@ -41,18 +40,21 @@ Write a function "crazyDiff" that computes the absolute difference between a giv
 It should return triple their absolute difference if the given number is greater than 19.
 */
 
-let crazyDiff = function(a,b){
-    let b =19
-    if (b - a >= b){
-       return (b - a) * 3
+let crazyDiff = function(givenNumber){
+
+    let answer = (19 - givenNumber);
+    
+    if (givenNumber > 19){
+       return answer * 3;
     } 
     else {
-        return (b - a)
+        return answer;
     }
 };
 
+let myCrazyDiff = crazyDiff(55);
+console.log(myCrazyDiff);
 
-  
 
 
 console.log('<--------------------- Excersize 4 --------------->');
@@ -71,7 +73,6 @@ let boundary = function(n){
 }
 let myBoundary = boundary(60);
 console.log(myBoundary);
-
 
 
 console.log('<--------------------- Excersize 5 --------------->');
