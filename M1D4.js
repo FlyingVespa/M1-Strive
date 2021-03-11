@@ -94,14 +94,44 @@ console.log('<--------------------- Excersize 6 --------------->');
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
 HINT: Module Operator
 */
+let check3and7 = function(num1){
+      
+    if (num1 % 3 === 0 && num1 % 7 === 0) {
+        console.log("it is a multiple of 3 AND 7");
+    } else if (num1 % 3 === 0){
+             console.log('it a multiple of 3');
+    } else if (num1 % 7 === 0){
+                console.log('it a multiple of 7');
+    } else {
+        console.log('it is not a multiple of 3 or 7');
+    }
+}
+
+console.log(check3and7(2));
+
 
 /* WRITE YOUR CODE HERE */
+
+console.log('<--------------------- Excersize 7 --------------->');
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
+let reverseString = function(string){
+let newString = "";
+
+    for (let i = string.length - 1; i >= 0; i--) {
+        newString += string[i];
+    }
+    return newString;
+}
+let stringReversed = reverseString("This is an interesting topic");
+console.log(stringReversed);
+
 /* WRITE YOUR CODE HERE */
+
+console.log('<--------------------- Excersize 8--------------->');
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
