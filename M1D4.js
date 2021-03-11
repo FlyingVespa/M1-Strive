@@ -146,13 +146,25 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 
 let upperFirst = function(s) {
-
-    return s[0].toUpperCase() + s.slice(1);
-      };
+    let words = s.split(' ')
+    console.log(words);
+    let finalString = ''
+    for (let word of words) {
+        finalString +=  word[0].toUpperCase() + word.slice(1) + ' '
+    }
+    return finalString
+};
    
 let stringResult = upperFirst("why wont this work");
 
 console.log(stringResult); 
+ 
+
+// put string into a an ARRAY. 
+// Then remove letters of array
+// save into new variable
+// then reconstruct sentance with the newly created variable
+// then console log
 
 
 /* WRITE YOUR CODE HERE */
@@ -162,18 +174,18 @@ Write a function "cutString" to create a new string without the first and last c
 */
 
 let cutString = function (string) {
-    return string.slice(1,-1)
+    let words = string.split(' ')
+    console.log(words);
+    let finalString = '';
+    for (word of words) {
+        finalString += word.slice(1,-1) + ' ' ;
+    } 
+    return finalString
  
 };
 
 let myCutString = cutString("this is a interesting test");
 console.log(myCutString);
-
-// put string into a an ARRAY. 
-// Then remove letters of array
-// save into new variable
-// then reconstruct sentance with the newly created variable
-// then consolel log
 
 
 /* WRITE YOUR CODE HERE */
