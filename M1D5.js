@@ -80,7 +80,7 @@ console.log(me);
 console.log("-----------------> F");
 
 let addKey = function(s) {
-    Object.assign(s,{skills : ''});
+    Object.assign(s,{skills : "HTML, CSS, JavaScript, Node, PHP, SQL, React, Angular"});
     return s;
 }
 addKey(me);
@@ -89,27 +89,85 @@ console.log(me);
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
-console.log("-----------------> F");
-
-
+console.log("-----------------> G");
+/*
+let removeKeyValue = function(me) {
+    if ( me.skills !== " "){
+    return me.skills = " "
+    console.log("was notempty")
+  } else { console.log("was empty");
+ 
+};
+removeKeyValue(me);
+console.log(me);
+*/
 
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
 
+console.log("-----------------> Ex 1");
+
+let dice = function(min,max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min)
+}
+let randomDice = dice(1,6);
+
+console.log(randomDice);
+
+
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+console.log("-----------------> Ex 2");
+
+let whoIsBigger = function(numberOne, numberTwo){
+
+  if (numberOne > numberTwo){
+    console.log(`${numberOne} is the biggest`)
+  } else if (numberTwo > numberOne) {
+    console.log(`${numberTwo} is the biggest`)
+  } else if (numberOne === numberTwo){
+    console.log(`${numberOne} and ${numberTwo} are equal`)
+  }
+  return whoIsBigger 
+};
+console.log(whoIsBigger(5,6));
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
-/* Ex.4
-    Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
+console.log("-----------------> Ex 3");
+/*
+let splitMe = function(par) {
+  let string = []
+  var words = str.split(" ");
+  console.log(words);
+ 
+}
+console.log(string.;
 */
+/* Ex.4
+    Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should 
+    return the string without the first letter, otherwise it should remove the last one from it.
+*/
+console.log("-----------------> Ex 4");
+
+let string = "Rome was not buildt in a day";
+
+let deleteOne = function(str) {
+      str = string.slice(1);
+   return str; 
+};
+
+let newString = deleteOne(string);
+console.log(newString);
+
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
