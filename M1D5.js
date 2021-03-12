@@ -160,27 +160,76 @@ console.log("-----------------> Ex 4");
 
 let string = "Rome was not buildt in a day";
 
-let deleteOne = function(str) {
+let deleteOne = function(str,p) {
+  if(p == true){
       str = string.slice(1);
    return str; 
+  } else {
+    console.log(string);
+  }
 };
-
-let newString = deleteOne(string);
+let newString = deleteOne(string, false);
 console.log(newString);
 
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
-*/
+   */
+
+   console.log("-----------------> Ex 5");
+let oldSentance = "This sentence contains 1 number and 2 cats."
+let onlyLetters = function(sentance) {
+  
+  sentance = oldSentance.replace(/[0-9]/g, '');
+  return sentance;
+}
+let withoutNumbers= onlyLetters(oldSentance);
+console.log(withoutNumbers);
+
+
 
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+console.log("-----------------> Ex 6");
+/* REGEX METHOD - not known yet
+let isThisAnEmail = function(){
+  return /\S+@\S+\.\S+/.test(email)
+}
+isThisAnEmail(mail@gmail.com) */
+
+function testEmailAddress(emailToTest) {
+  // check for @
+  let atSymbol = emailToTest.indexOf("@");
+  if(atSymbol < 1) return false;
+
+  let dot = emailToTest.indexOf(".");
+  if (dot <= atSymbol + 2) return false;
+
+  // check that the dot is not at the end
+  if (dot === emailToTest.length - 1) return false;
+
+  return true;
+}
+let emailToTest = "isthiswork@@inggmail.com";
+console.log(testEmailAddress(emailToTest));
+
+// to check amount of @
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+console.log("-----------------> Ex 7");
+
+
+let whatDayIsIt = function() {
+var day = new Date()
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+return days[day.getDay()];
+};
+let todayIs = whatDayIsIt();
+console.log(todayIs);
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
