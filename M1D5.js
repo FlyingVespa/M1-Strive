@@ -110,11 +110,11 @@ console.log(me);
 console.log("-----------------> Ex 1");
 
 let dice = function(min,max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(1);
+  max = Math.floor(6);
   return Math.floor(Math.random() * (max - min) + min)
 }
-let randomDice = dice(1,6);
+let randomDice = dice();
 
 console.log(randomDice);
 
@@ -241,7 +241,15 @@ console.log(todayIs);
         values: [3, 3, 4]
     }
 */
+/*
+let rollTheDices = function() {
+  
+  let newDices = dice()
+  sum( )
+let multiDice = rollTheDices();
 
+console.log(multiDice);
+*/
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
@@ -249,34 +257,44 @@ console.log(todayIs);
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
-
+console.log("-----------------> Ex 10");
+/*
+let myBirthday = ""
+let isTodayMyBirthday = function(myBirthday){
+   myBirthday !== new Date() ?  false : true;
+     
+};
+let verifyBirthday = isTodayMyBirthday(myBirthday);
+console.log(verifyBirthday);
+*/
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
 /* Ex.11
    Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
 */
+console.log("-----------------> Ex 11");
 
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
-
+console.log("-----------------> Ex 12");
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
-
+console.log("-----------------> Ex 13");
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
 */
-
+console.log("-----------------> Ex 13");
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
-
+console.log("-----------------> Ex 13");
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
-
+console.log("-----------------> Ex 13");
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
