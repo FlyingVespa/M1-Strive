@@ -40,14 +40,18 @@ h3 {
     text-transform: capitalize;
 }
 .message-board {
-      
-    margin-left: auto;
-    margin-right: auto; 
-    height: 10em;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-right: 30%; 
     display: block;
     position: relative;
     align-items: center;
     justify-content: center }
 
 
-
+textarea {
+    margin: 5px;
+   ;
+    height: 150px;
+}

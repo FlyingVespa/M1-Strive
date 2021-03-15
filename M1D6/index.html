@@ -10,9 +10,10 @@
     <title>M1D6 - Strive</title>
 </head>
 <body>
- <h1>Cicala Gold Trattoria</h1>
+ <h1 id="shop-name">Cicala Gold Trattoria</h1>
     
  <button class="btn btn-dark"onclick="changeBackground()">Change background color</button>
+ <button class="btn btn-dark" id="hidebtn" onclick="toggleBtnClick()">Hide Images</button>
  <table>
     <thead>
       <tr>
@@ -24,32 +25,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><img class="food-image" src="img/pizza.png" alt="pizza"></td>
-        <td><h3>Diavola Pizza</h3></td>
+        <td><img id="foodimg"class="food-image" src="img/pizza.png" alt="pizza"></td>
+        <td><a href="shorturl.at/qrFP9"><h3>Diavola Pizza</h3></a></td>
         <td><p>Pizza diavola means the devils pizza and is quite a spicy little devil and one of my favourite pizzas.
           If you like spicy hot and chilli flavours you will enjoy this pizza </p></td>
         <td><h2>$ 7</h2></td>
         
       </tr>
       <tr>
-        <td><img class="food-image" src="img/cozze.png" alt="cozze"></td>
-        <td><h3>Steamed Mussels</h3></td>
+        <td><img id="foodimg" class="food-image" src="img/cozze.png" alt="cozze"></td>
+        <td><a href="shorturl.at/lHRU2"><h3>Steamed Mussels</h3></a></td>
         <td><p> As the mussels steam, the broth gets trapped inside the shells. 
           It's divine, plus, the leftover broth is perfect for soaking up with a good loaf of bread.</p></td>
         <td><h2>$ 12</h2></td>
         
       </tr>
       <tr>
-        <td><img class="food-image"  src="img/pasta.png" alt="pasta"></td>
-        <td><h3>Lasagne</h3></td>
+        <td><img id="foodimg" class="food-image"  src="img/pasta.png" alt="pasta"></td>
+        <td><a href="shorturl.at/vCTU3"><h3>Lasagne</h3></a></td>
         <td><p>Lasagne, or the singular lasagna, is an Italian dish made of stacked layers
            of thin flat pasta alternating with fillings such as ragù and other vegetables,cheese 
            and seasonings and spices such as garlic, oregano and basil.</p></td>
         <td><h2>$ 9</h2></td>
       </tr>
       <tr>
-        <td><img class="food-image"  src="img/steak.png" alt="steak"></td>
-        <td><h3>New York Strip Steak</h3></td>
+        <td><img id="foodimg" class="food-image"  src="img/steak.png" alt="steak"></td>
+        <td><a href="shorturl.at/hAGKS"><h3>New York Strip Steak</h3></a></td>
         <td><p> Well marbled, full bodied and rich with beefy flavor,
           a New York Strip is firm and tender when it comes to texture, flavor and fat.
           Cut from the shorter side of the beef loin, the muscles in this area do little work, 
@@ -57,8 +58,8 @@
         <td><h2>$ 22</h2></td>
       </tr>
       <tr>
-        <td><img class="food-image" src="img/spritz.png" alt="spritz"></td>
-        <td><h3>Apperol Spritz</h3></td>
+        <td><img id="foodimg" class="food-image" src="img/spritz.png" alt="spritz"></td>
+        <td><a href="shorturl.at/fvGY6"><h3>Apperol Spritz</h3></a></td>
         <td><p>A Spritz Veneziano or Aperol Spritz, also called just Spritz, 
           is an Italian wine-based cocktail, commonly served as an aperitif 
           in Northeast Italy. It consists of prosecco, Aperol and soda water.</p></td>
@@ -80,6 +81,13 @@
 
 
 <footer> 
+  <div class="address">
+    <p>Located:</p>
+    <p id="shop-name">Cicala Gold Pizzaria</p>
+    <p id="address"> 44 Old Brick Road, Stone Haven, Los Angeles, USA</p>
+    <button class="btn btn-dark" type="button" onclick="changeAddress()">Change Address</button>
+    
+  </div>
 
 </footer>
   <!--
@@ -90,26 +98,24 @@
       </p>
     Complete exercises from 1 to 6 with just plain HTML
 
-      <p>EX1.: Add an h1 tag with the name of your shop</p>      
-      <p>EX2.: Add a TABLE with the top 5 products of your shop</p>
-      <p>EX3.: Insert for each product an image, a title, a description and a price</p>
-    
-    
-      <p>EX4.: Add links to existing Amazon products for each item in the table</p>
-      <p>EX5.: Add a footer with the address and the name of your shop</p>
+      <p>EX1.: Add an h1 tag with the name of your shop</p> ----------DONE
+      <p>EX2.: Add a TABLE with the top 5 products of your shop</p> ----------DONE
+      <p>EX3.: Insert for each product an image, a title, a description and a price</p> ----------DONE
+          <p>EX4.: Add links to existing Amazon products for each item in the table</p> ----------DONE
+      <p>EX5.: Add a footer with the address and the name of your shop</p> ----------DONE
       <p>
         EX6.: Add a message board where the user can type a message in it (no real
-        posting/saving features required!)
+        posting/saving features required!) ----------DONE
       </p>
     
       <p>EXTRA (use JavaScript code here)</p>
     
-      <p>EX7.: Write a function to change the h1 text</p>
-      <p>EX8.: Write a function to change the page background color</p>
-      <p>EX9.: Write a function to change the footer address with a fake one</p>
-      <p>EX10.: Write a function to add a CSS class to every Amazon link</p>
+      <p>EX7.: Write a function to change the h1 text</p> done ----------DONE
+      <p>EX8.: Write a function to change the page background color</p> done ----------DONE
+      <p>EX9.: Write a function to change the footer address with a fake one</p> done ----------DONE
+      <p>EX10.: Write a function to add a CSS class to every Amazon link</p>  
       <p>
-        EX11: Write a function to toggle a CSS class for all the images in the
+        EX11: Write a function to toggle a CSS class for all the images in the 
         table; that class should set the visibility of the image
       </p>
       <p>
