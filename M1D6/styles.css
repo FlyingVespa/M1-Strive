@@ -43,15 +43,16 @@ h3 {
     position: relative;
     margin-top: 10px;
     margin-left: 30%;
-    margin-right: 30%; 
-    display: block;
+    margin-right: 30%;
+ 
+     display: block;
     position: relative;
     align-items: center;
     justify-content: center }
 
-
 textarea {
+    margin-left: 50px;
     margin: 5px;
-   ;
     height: 150px;
+    width: 100%;
 }
