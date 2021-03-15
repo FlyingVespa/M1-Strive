@@ -12,6 +12,7 @@
 <body>
  <h1>Cicala Gold Trattoria</h1>
     
+ <button class="btn btn-dark"onclick="changeBackground()">Change background color</button>
  <table>
     <thead>
       <tr>
@@ -67,7 +68,11 @@
   </table>
 
   <div class="message-board">
-    <form action="post"></form>
+    <form action="post">
+      <textarea name="message" rows="5" cols="50" placeholder="Type your message here"></textarea>
+      <br><br>
+      <button class="btn btn-dark" type="button" >Send Message</button>
+    </form>
 
   </div>
 
@@ -112,5 +117,5 @@
         every time it's invoked
       </p>
     -->
-
+<script src="main.js"></script>
 </html>

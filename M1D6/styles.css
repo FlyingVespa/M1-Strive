@@ -39,3 +39,15 @@ p, img, h3 {
 h3 {
     text-transform: capitalize;
 }
+.message-board {
+      
+    margin-left: auto;
+    margin-right: auto; 
+    height: 10em;
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center }
+
+
+
