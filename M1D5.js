@@ -65,7 +65,7 @@ console.log(me);
     Programmatically remove the age property from the previously create object.
 */
 console.log("-----------------> E");
-
+console.log(" Age property removed ");
 let removeKey = function(me) {
 
   delete me.age;
@@ -78,9 +78,9 @@ console.log(me);
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
 console.log("-----------------> F");
-
+console.log(" Property 'skills'added with value ");
 let addKey = function(s) {
-    Object.assign(s,{skills : "HTML, CSS, JavaScript, Node, PHP, SQL, React, Angular"});
+    Object.assign(s,{skills : ["React", "Html", "CSS"]});
     return s;
 }
 addKey(me);
@@ -90,17 +90,16 @@ console.log(me);
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
 console.log("-----------------> G");
-/*
-let removeKeyValue = function(me) {
-    if ( me.skills !== " "){
-    return me.skills = " "
-    console.log("was notempty")
-  } else { console.log("was empty");
- 
-};
-removeKeyValue(me);
+console.log(" The last value of skills removed. ");
+
+let removeOneValueOfKey = function() {
+  let skillsValue = me.skills
+  skillsValue.pop();
+  return;
+}
+removeOneValueOfKey();
 console.log(me);
-*/
+
 
 // JS Functions
 /* Ex.1
@@ -114,10 +113,8 @@ let dice = function(min,max) {
   max = Math.floor(6);
   return Math.floor(Math.random() * (max - min) + min)
 }
-let randomDice = dice();
 
-console.log(randomDice);
-
+console.log(dice());
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
@@ -133,7 +130,7 @@ let whoIsBigger = function(numberOne, numberTwo){
   } else if (numberOne === numberTwo){
     console.log(`${numberOne} and ${numberTwo} are equal`)
   }
-  return whoIsBigger 
+  return; 
 };
 console.log(whoIsBigger(5,6));
 
@@ -143,42 +140,43 @@ console.log(whoIsBigger(5,6));
 */
 
 console.log("-----------------> Ex 3");
-/*
+
+let orignalString = "I Love Coding";
 let splitMe = function(par) {
-  let string = []
-  var words = str.split(" ");
-  console.log(words);
- 
-}
-console.log(string.;
-*/
+  let arrString = orignalString.split(" ");
+  return arrString;
+ };
+
+console.log(splitMe());
+
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should 
     return the string without the first letter, otherwise it should remove the last one from it.
 */
 console.log("-----------------> Ex 4");
 
-let string = "Rome was not buildt in a day";
+let string = "Rome was not buildt in a day.";
 
-let deleteOne = function(str,p) {
-  if(p == true){
-      str = string.slice(1);
-   return str; 
+let deleteOne = function(string,parameter) {
+  if(parameter === true){
+    str = string.slice(1);
+   return str;
   } else {
     console.log(string);
   }
 };
-let newString = deleteOne(string, false);
-console.log(newString);
-
+console.log("FALSE parameter - Print sting as is");
+console.log(deleteOne(string, false));
+console.log("TRUE parameter - First letter removed");
+console.log(deleteOne(string, true));
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
    */
 
-   console.log("-----------------> Ex 5");
-let oldSentance = "This sentence contains 1 number and 2 cats."
+console.log("-----------------> Ex 5");
+let oldSentance = "This sentence contains 1 number and 5 cats."
 let onlyLetters = function(sentance) {
   
   sentance = oldSentance.replace(/[0-9]/g, '');
@@ -212,7 +210,7 @@ function testEmailAddress(emailToTest) {
 
   return true;
 }
-let emailToTest = "isthiswork@@inggmail.com";
+let emailToTest = "isthiswork@inggmail.com";
 console.log(testEmailAddress(emailToTest));
 
 // to check amount of @
@@ -241,6 +239,22 @@ console.log(todayIs);
         values: [3, 3, 4]
     }
 */
+console.log("-----------------> Ex 8");
+/*
+
+let rollTheDices = function(times) {
+  let [...parsed] = times*(dice());
+  //let randomRoll = (dice())*times;
+   //return randomRoll;
+   return parsed;
+ 
+}
+console.log(parsed);
+console.log(rollTheDices(5));
+ for (i = 0 ; i < arr.lenght; sumof())
+forEach(i++) 
+
+*/
 /*
 let rollTheDices = function() {
   
@@ -253,25 +267,63 @@ console.log(multiDice);
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
+console.log("-----------------> Ex 9");
+/*
+const oneDay = 1000 * 60 * 60 * 24;
+const todayDate = new Date();
+let pastDate = new Date('07/30/2019');
+let howManyDays = function(pastDate){
+  let parsedTodayDate =  (Date.parse(todayDate));
+  let parsedPastDate = (Date.parse(pastDate)); {
+  parsedTodayDate- parsedPastDate; 
+   return daysPassed;
+  }
+
+   console.log(parsedPastDate);
+}
+
+console.log(Date.parse(pastDate));
+console.log(pastDate);
+console.log(todayDate);
+console.log(howManyDays())
+*/
+
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 console.log("-----------------> Ex 10");
-/*
-let myBirthday = ""
-let isTodayMyBirthday = function(myBirthday){
-   myBirthday !== new Date() ?  false : true;
-     
+
+let myBirthday = new Date("03/13/2021");
+console.log(myBirthday);
+let todayDateIs = new Date;
+
+// parse the dates
+// split() the time, last 
+let isTodayMyBirthday = function(a,b){
+
+  if(a == b){
+    return true;
+  } else {
+    return false;
+  }
+   //myBirthday !== todayDateIs ?  false : true;
+   
 };
-let verifyBirthday = isTodayMyBirthday(myBirthday);
-console.log(verifyBirthday);
-*/
+
+console.log(isTodayMyBirthday(myBirthday, todayDateIs));
+
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
 /* Ex.11
-   Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
+  
+Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
+*/
+/*
+let deleteProp = function (obj,str) {
+
+}
 */
 console.log("-----------------> Ex 11");
 
@@ -286,33 +338,50 @@ console.log("-----------------> Ex 13");
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
 */
-console.log("-----------------> Ex 13");
+console.log("-----------------> Ex 14");
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
-console.log("-----------------> Ex 13");
+/*
+let nmovies = movie.year;
+let onlyInThisMillennium = function(millennium){
+  let currentMovies =  nmovies.match(millennium)
+  return currentMovies;
+}
+let movi = onlyInThisMillennium(2007)
+console.log(movi);
+
+*/
+console.log("-----------------> Ex 15");
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
-console.log("-----------------> Ex 13");
+/*
+let getMovieById = function(){
+  movieID = 
+  return movieID;
+}
+*/
+console.log("-----------------> Ex 16");
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
 
+console.log("-----------------> Ex 17");
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
-
+console.log("-----------------> Ex 18");
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
     and another array "unmatch" with all the remaining ones.
 */
-
+console.log("-----------------> Ex 19");
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
-
+console.log("-----------------> Ex 20");
 // [EXTRAS] JS Advanced
 
 /* Ex.21
