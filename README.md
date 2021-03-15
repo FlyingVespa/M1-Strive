@@ -4,11 +4,17 @@
  This Contains Module 1 
 
 D3
- JavaScript - 
+-Intro to JavaScript
 
 D4
 
 D5
+- Revision excersizes on JavaScript from previous lessons.
+
 
 D6
-Intro to 
+-Intro to HTML & CSS. 
+-Using JavaScript for DOM manipulation.
+-Adding, removing, toggling various elements inside the dom.
+
+D7

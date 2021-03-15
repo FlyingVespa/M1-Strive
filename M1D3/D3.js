@@ -16,7 +16,7 @@ Create and array containing the first 5 positive numbers.
 
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 1")
-let positiveNum = [1,2,3,4,5];
+let positiveNum = [1, 2, 3, 4, 5];
 console.log(positiveNum);
 
 
@@ -27,33 +27,29 @@ console.log("----------------------------> 2")
 
 
 let meMyself = {
-    name :  "Hedri",
+    name: "Hedri",
     surname: "Nel",
     email: "unknown@gmail.com",
     age: 29
 };
 console.log(meMyself)
 
-
 /* EXERCISE 3
 Add to the previously created object a boolean value to rappresent wheter you have or not a driving license.
 */
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 3")
-let license = true;
-let newMe = meMyself.push(license);
 
-console.log(`${meMyself.name} ${newMe.licence} a driving license`);
-//console.log(meMyself);
+meMyself.license = true;
+console.log(meMyself);
 
 /* EXERCISE 4
 Remove from the previously created object the age property.
 */
-
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 4")
-/*let newValue = meMyself.pop(age);
-console.log(newValue);*/
+delete meMyself.age;
+console.log(meMyself)
 
 
 /* EXERCISE 5
@@ -62,15 +58,14 @@ Create a second object with name, surname, email address and verify that this ob
 
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 5")
-/*let newUser = {};
-Object.assign(meMyselfAndI, newUser);
+let newUser = {};
+Object.assign(meMyself, newUser);
 newUser.email = 'realmail@gmail.com';
 
-if (newUser.email == meMyselfAndI.email) {
+if (newUser.email == meMyself.email) {
     console.log("emails match")
-}
-else {
-    console.log( "emails dont match");
+} else {
+    console.log("emails dont match");
 }
 
 /* EXERCISE 6
@@ -80,23 +75,14 @@ Write an algorithm that calculates the total cost to charge the user with.
 */
 
 /* WRITE YOUR CODE HERE */
-console.log("----------------------------> 6") /*
-let totalShoppingCart = [{
-     user1: 45
-},
-{
-    user2 : 65
-}];
+console.log("----------------------------> 6")
 
-let shipping = 10;
-let newCart = 0;
+let totalShoppingCart = 30;
+if (50 > totalShoppingCart) {
+    totalShoppingCart += 10
+};
 
-if ( totalShoppingCart.user1 <= 50 ) {
-    newCart = (totalShoppingCart.user1 + shipping)
-} else { newcart = totalShoppingCart.user1}
-    
-    console.log(newCart);
-*/
+console.log(totalShoppingCart);
 
 /* EXERCISE 7
 You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
@@ -105,31 +91,37 @@ Modify the previous answer inserting this information and, applying the same rul
 
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 7")
-/*
-for (i = 0.8; totalShoppingCart.user1 * i ) 
-if totalShoppingCart.user1 <= 50 + shippping
-*/
+totalShoppingCart = 50;
+let discount = totalShoppingCart * 0.8;
+if (50 > discount) {
+    discount += 10;
+    console.log("Price was under 50, so shipping was added")
+} else {
+    discount = ((totalShoppingCart) * 0.8)
+    console.log("Price after discount was more than 50, thus free shipping");
+}
+console.log(totalShoppingCart);
+
+// this execrise can be interpretated differently, but according to me eccomerse exp this is how discounts are applied.
 
 /* EXERCISE 8
 Create an object representing a car with properties like brand, model, licensePlate.
 After you create the first car, clone it 5 times and change the licensePlate for each cloned car without affecting the original one.
 */
-/*
-let newCar = [{
-    brand : 'Ford',
-    model : '556',
-    licensePlate : 55554 ,
+
+let car = {
+    brand: 'Ford',
+    model: '556',
+    licensePlate: 55554,
 }
-{}
-]
+console.log(car);
 
+for (let i = 1; i < 6; i++) {
+    let car1 = Object.assign({}, car);
+    car1.licensePlate += i
+    console.log(car1);
+};
 
-
-while (let y = 0; y >= newCar.licensePlate; y++ ){
-    newCar1
-
-}
-*/
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 8")
 
@@ -137,11 +129,10 @@ console.log("----------------------------> 8")
 Create a new array called carsForRent containing all the cars from the previous exercise.
 */
 
-//let carsForRent = newCar.licencePLate[0,1,2,3,5];
-
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 9")
-
+let carsForRent = car1;
+console.log(car);
 /* EXERCISE 10
 Remove the first and the last car from the carsForRent array.
 */
@@ -180,4 +171,3 @@ console.log("----------------------------> 13")
 /* WHEN YOU ARE FINISHED
 Send the code on the Eduflow platform. In the next days we'll also learn how to use GIT
 */
-
