@@ -4,8 +4,7 @@ document.querySelector("h1").innerHTML = " Panarotti's Restuarant "
 
 // EX 8 ---> Toggle Background colour
 function changeBackground() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark-mode");
 };
 
 // Ex ---> 9 Toggle between real and fake address.
@@ -31,7 +30,7 @@ function addClass() {
 };
 
 // EX ---> 11 Toggle Hide Images - array
-
+// can also do as Ex 8 but need to additional class names
 function toggleBtnClick() {
     let imgToggle = document.querySelectorAll("img");
     for (let i = 0; i < imgToggle.length; i++) {
@@ -44,15 +43,17 @@ function toggleBtnClick() {
 };
 
 //  EX 12 ---> Toggle Price colour array each price should be different colour
-let colors = ['red', 'blue', 'green', 'teal', 'goldenyellow', 'orange', 'magenta', 'silver'];
-let prices = document.querySelectorAll(".price");
-
 function changePriceColour() {
+    let colors = ['red', 'blue', 'green', 'teal', 'goldenyellow', 'orange', 'magenta', 'silver'];
+    let prices = document.querySelectorAll(".price");
     for (i = 0; i < prices.length; i++) {
         // Pick a random color from the array 'colors'.
-        prices[i].style.color = colors[Math.floor(Math.random() * colors.length)];
-        prices[i].style.width = '100px';
-        prices[i].style.height = '100px';
-        prices[i].style.display = 'inline-block';
+        let price = prices[i].style;
+        let randomColorIndex = Math.floor(Math.random() * colors.length);
+
+        price.color = colors[randomColorIndex];
+        price.width = '100px';
+        price.height = '100px';
+        price.display = 'inline-block';
     }
 };
