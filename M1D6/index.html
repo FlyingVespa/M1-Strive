@@ -1,96 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <title>M1D6 - Strive</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+  <title>M1D6 - Strive</title>
 </head>
+
 <body>
- <h1 id="shop-name">Cicala Gold Trattoria</h1>
-    
- <button class="btn btn-dark"onclick="changeBackground()">Change background color</button>
- <button class="btn btn-dark" id="hidebtn" onclick="toggleBtnClick()">Hide Images</button>
- <table>
+  <h1 id="shop-name">Cicala Gold Trattoria</h1>
+  <hr />
+  <div class="buttons">
+    <button class="btn btn-dark" id="bgbtn" onclick="changeBackground()">
+      Change background color
+    </button>
+    <button class="btn btn-dark" id="hidebtn" onclick="toggleBtnClick()">
+      Hide Images
+    </button>
+    <button class="btn btn-dark" id="pricebtn" onclick="changePriceColour()">
+      Change Price Colour
+    </button>
+    <button class="btn btn-dark" id="classbtn" onclick="addClass()">
+      Add Class to Link
+    </button>
+  </div>
+
+  <hr />
+  <table>
     <thead>
       <tr>
-        <th><h2>Image</h2></th>
-        <th><h2>Product</h2></th>
-        <th><h2>description</h2></th>
-        <th><h2>Price</h2></th>
+        <th>
+          <h2>Image</h2>
+        </th>
+        <th>
+          <h2>Product</h2>
+        </th>
+        <th>
+          <h2>description</h2>
+        </th>
+        <th>
+          <h2>Price</h2>
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><img id="foodimg"class="food-image" src="img/pizza.png" alt="pizza"></td>
-        <td><a href="shorturl.at/qrFP9"><h3>Diavola Pizza</h3></a></td>
-        <td><p>Pizza diavola means the devils pizza and is quite a spicy little devil and one of my favourite pizzas.
-          If you like spicy hot and chilli flavours you will enjoy this pizza </p></td>
-        <td><h2>$ 7</h2></td>
-              </tr>
-      <tr>
-        <td><img id="foodimg" class="food-image" src="img/cozze.png" alt="cozze"></td>
-        <td><a href="shorturl.at/lHRU2"><h3>Steamed Mussels</h3></a></td>
-        <td><p> As the mussels steam, the broth gets trapped inside the shells. 
-          It's divine, plus, the leftover broth is perfect for soaking up with a good loaf of bread.</p></td>
-        <td><h2>$ 12</h2></td>
-        
+        <td>
+          <img id="foodimg" class="food-image" src="img/pizza.png" alt="pizza" />
+        </td>
+        <td>
+          <a href="shorturl.at/qrFP9">
+            <h3>Diavola Pizza</h3>
+          </a>
+        </td>
+        <td>
+          <p>
+            Pizza diavola means the devils pizza and is quite a spicy little
+            devil and one of my favourite pizzas. If you like spicy hot and
+            chilli flavours you will enjoy this pizza
+          </p>
+        </td>
+        <td>
+          <h2 class="price">$ 7</h2>
+        </td>
       </tr>
       <tr>
-        <td><img id="foodimg" class="food-image"  src="img/pasta.png" alt="pasta"></td>
-        <td><a href="shorturl.at/vCTU3"><h3>Lasagne</h3></a></td>
-        <td><p>Lasagne, or the singular lasagna, is an Italian dish made of stacked layers
-           of thin flat pasta alternating with fillings such as ragù and other vegetables,cheese 
-           and seasonings and spices such as garlic, oregano and basil.</p></td>
-        <td><h2>$ 9</h2></td>
+        <td>
+          <img id="foodimg" class="food-image food-hidden" src="img/cozze.png" alt="cozze" />
+        </td>
+        <td>
+          <a href="shorturl.at/lHRU2">
+            <h3>Steamed Mussels</h3>
+          </a>
+        </td>
+        <td>
+          <p>
+            As the mussels steam, the broth gets trapped inside the shells.
+            It's divine, plus, the leftover broth is perfect for soaking up
+            with a good loaf of bread.
+          </p>
+        </td>
+        <td>
+          <h2 class="price">$ 12</h2>
+        </td>
       </tr>
       <tr>
-        <td><img id="foodimg" class="food-image"  src="img/steak.png" alt="steak"></td>
-        <td><a href="shorturl.at/hAGKS"><h3>New York Strip Steak</h3></a></td>
-        <td><p> Well marbled, full bodied and rich with beefy flavor,
-          a New York Strip is firm and tender when it comes to texture, flavor and fat.
-          Cut from the shorter side of the beef loin, the muscles in this area do little work, 
-          and that spells tenderness every time.</p></td>
-        <td><h2>$ 22</h2></td>
+        <td>
+          <img id="foodimg" class="food-image" src="img/pasta.png" alt="pasta" />
+        </td>
+        <td>
+          <a href="shorturl.at/vCTU3">
+            <h3>Lasagne</h3>
+          </a>
+        </td>
+        <td>
+          <p>
+            Lasagne, or the singular lasagna, is an Italian dish made of
+            stacked layers of thin flat pasta alternating with fillings such
+            as ragù and other vegetables,cheese and seasonings and spices such
+            as garlic, oregano and basil.
+          </p>
+        </td>
+        <td>
+          <h2 class="price">$ 9</h2>
+        </td>
       </tr>
       <tr>
-        <td><img id="foodimg" class="food-image" src="img/spritz.png" alt="spritz"></td>
-        <td><a href="shorturl.at/fvGY6"><h3>Apperol Spritz</h3></a></td>
-        <td><p>A Spritz Veneziano or Aperol Spritz, also called just Spritz, 
-          is an Italian wine-based cocktail, commonly served as an aperitif 
-          in Northeast Italy. It consists of prosecco, Aperol and soda water.</p></td>
-        <td><h2>$ 5</h2></td>
+        <td>
+          <img id="foodimg" class="food-image" src="img/steak.png" alt="steak" />
+        </td>
+        <td>
+          <a href="shorturl.at/hAGKS">
+            <h3>New York Strip Steak</h3>
+          </a>
+        </td>
+        <td>
+          <p>
+            Well marbled, full bodied and rich with beefy flavor, a New York
+            Strip is firm and tender when it comes to texture, flavor and fat.
+            Cut from the shorter side of the beef loin, the muscles in this
+            area do little work, and that spells tenderness every time.
+          </p>
+        </td>
+        <td>
+          <h2 class="price">$ 22</h2>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img id="foodimg" class="food-image" src="img/spritz.png" alt="spritz" />
+        </td>
+        <td>
+          <a href="shorturl.at/fvGY6">
+            <h3>Apperol Spritz</h3>
+          </a>
+        </td>
+        <td>
+          <p>
+            A Spritz Veneziano or Aperol Spritz, also called just Spritz, is
+            an Italian wine-based cocktail, commonly served as an aperitif in
+            Northeast Italy. It consists of prosecco, Aperol and soda water.
+          </p>
+        </td>
+        <td>
+          <h2 class="price">$ 5</h2>
+        </td>
       </tr>
     </tbody>
   </table>
 
   <div class="message-board">
     <form action="post">
-      <textarea name="message"placeholder="Type your message here"></textarea>
-      <br><br>
-      <button class="btn btn-dark" type="button" >Send Message</button>
+      <textarea name="message" placeholder="Type your message here"></textarea>
+      <br /><br />
+      <button class="btn btn-dark" type="button">Send Message</button>
     </form>
-
   </div>
-
 </body>
-
-
-<footer> 
-  <hr>
+<footer>
+  <hr />
   <div class="address">
     <p>Located:</p>
     <p id="shop-name">Cicala Gold Pizzaria</p>
-    <p id="address"> 44 Old Brick Road, Stone Haven, Los Angeles, USA</p>
-    <button class="btn btn-dark" type="button" onclick="changeAddress()">Change Address</button>
-    
+    <p id="address">Real Address: 44 Old Brick Road</p>
+    <button class="btn btn-dark" type="button" onclick="changeAddress()">
+      Change Address
+    </button>
   </div>
-
 </footer>
-  <!--
+<hr>
+<!--
     <p>
         You have been assigned to the creation of a Smartphone Shop Website. The homepage you're about to write is 
         just a showcase of the products of the shop with some extra information. 
@@ -114,14 +198,15 @@
       <p>EX8.: Write a function to change the page background color</p> done ----------DONE
       <p>EX9.: Write a function to change the footer address with a fake one</p> done ----------DONE
       <p>EX10.: Write a function to add a CSS class to every Amazon link</p>  
-      <p>
+      <p> ----------DONE
         EX11: Write a function to toggle a CSS class for all the images in the 
-        table; that class should set the visibility of the image
+        table; that class should set the visibility of the image ----------DONE
       </p>
       <p>
         EX12: Write a function to color the price of each product in a different one
-        every time it's invoked
+        every time it's invoked ----------DONE
       </p>
     -->
 <script src="main.js"></script>
+
 </html>
