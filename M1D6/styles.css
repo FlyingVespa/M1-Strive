@@ -6,8 +6,6 @@
   }
   
 
-
-
 .food-image {
    
     width: 250px;
@@ -55,4 +53,14 @@ textarea {
     margin: 5px;
     height: 150px;
     width: 100%;
+}
+th {
+    border: 2.5px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+th h2 {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px gray;
 }
