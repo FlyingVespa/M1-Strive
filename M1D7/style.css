@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 header {
@@ -13,6 +14,7 @@ header {
 section {
     display: -webkit-flex;
     display: flex;
+    place-content: center;
 }
 
 /* Style the navigation menu */
@@ -33,7 +35,7 @@ article {
     flex: 3;
     background-color: #f1f1f1;
     padding: 10px;
-
+    width: min(600px);
 }
 
 /* Style the footer */
@@ -46,4 +48,11 @@ footer {
 
 .myHeading {
     color: red;
+}
+
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
 }
