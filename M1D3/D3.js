@@ -109,44 +109,81 @@ Create an object representing a car with properties like brand, model, licensePl
 After you create the first car, clone it 5 times and change the licensePlate for each cloned car without affecting the original one.
 */
 
+/* WRITE YOUR CODE HERE */
+console.log("----------------------------> 8")
+
 let car = {
     brand: 'Ford',
     model: '556',
     licensePlate: 55554,
 }
-console.log(car);
+
+let carsObj = {};
+let carsArr = [];
 
 for (let i = 1; i < 6; i++) {
-    let car1 = Object.assign({}, car);
-    car1.licensePlate += i
-    console.log(car1);
+    carsObj[`car${i}`] = {
+        brand: car.brand,
+        model: car.model,
+        licensePlate: car.licensePlate + i
+    }
+    carsArr.push({
+        brand: car.brand,
+        model: car.model,
+        licensePlate: car.licensePlate + i
+    });;
+
 };
-
-/* WRITE YOUR CODE HERE */
-console.log("----------------------------> 8")
-
+console.log("Original Car Object");
+console.log(car);
+console.log("Five clones of Car Object with diff LiscensePlate");
+console.log(carsObj);
 /* EXERCISE 9
 Create a new array called carsForRent containing all the cars from the previous exercise.
 */
 
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 9")
-let carsForRent = car1;
-console.log(car);
+console.log("Coppied Object Array Into carsForRent");
+let carsForRent = {
+    ...carsObj
+};
+
+console.log(carsForRent);
+
+
 /* EXERCISE 10
 Remove the first and the last car from the carsForRent array.
 */
-//carsForRent.pop();
-//carsForRent.shift();
+
 /* WRITE YOUR CODE HERE */
 console.log("----------------------------> 10")
+/*
 
+const doSomething = (carsForRent, 1) => {
+    let res = Object.assign({}, carsForRent)
+    delete res[1]
+    return res
+}
+*/
+// How to remove an object within an object
+/* want to display log as such:
+  {
+      car1: { brand: 'Ford', model: '556', licensePlate: 55555 },
+      car3: { brand: 'Ford', model: '556', licensePlate: 55557 },
+      car5: { brand: 'Ford', model: '556', licensePlate: 55559 }
+    }
+    */
+
+console.log("----------------------------> 11")
 /* EXERCISE 11
 Print in the console the TYPES of the car variable, of its licensePlate and of the its brand properties.
 */
-
 /* WRITE YOUR CODE HERE */
-console.log("----------------------------> 11")
+
+console.log(car.brand, car.model, car.licensePlate);
+
+console.log("----------------------------> 12")
 
 /* EXERCISE 12
 Create a new array called carsForSale and insert 3 cars in it.
@@ -154,19 +191,34 @@ Store in a variable totalCars the number of cars present in both carsForSale and
 */
 
 /* WRITE YOUR CODE HERE */
-console.log("----------------------------> 12")
-/*
-let carsForSale = ['red','blue','green'];
-let totalCars = (carsForRent.length + carsForRent.length);
-console.log(totalCars)*/
 
+
+let carsForSale = [carsArr[1], carsArr[3], carsArr[4]]
+let totalCars = carsForSale.length
+
+console.log("Listed cars with details");
+console.log(carsForSale);
+
+console.log("Total Cars that are forsale");
+console.log(totalCars);
+
+console.log("----------------------------> 13")
 /* EXERCISE 13
 Print in the console the data from each car in the carsForSale array.
 */
-//console.dir(carsForSale)
+console.log(...carsForSale)
+// want it to log {
+/*
+    {
+        car1: { brand: 'Ford', model: '556', licensePlate: 55555 },
+        car3: { brand: 'Ford', model: '556', licensePlate: 55557 },
+        car5: { brand: 'Ford', model: '556', licensePlate: 55559 }
+      }
+    */
+// because in current log cant see which details are assigned to which car
 
 /* WRITE YOUR CODE HERE */
-console.log("----------------------------> 13")
+
 
 /* WHEN YOU ARE FINISHED
 Send the code on the Eduflow platform. In the next days we'll also learn how to use GIT
