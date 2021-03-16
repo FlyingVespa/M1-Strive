@@ -21,7 +21,7 @@
 ## D6
 - Intro to HTML & CSS. 
 - Using JavaScript for DOM manipulation.
-- Adding, removing, toggling various elements inside the dom.
+- Adding, removing, toggling various elements inside the dom
 
 ## D7
 - Manipulation the HTLM DOM through JS functions
