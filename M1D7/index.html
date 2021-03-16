@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+  <style>
+    .myHeading {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>This is the title of the page</h1>
+    <h2>This is the subtitle of the page</h2>
+    <hr>
+    <button class="btn btn-dark" onclick="changeTitle()">Change Title</button>
+    <button class="btn btn-danger" onclick="addClassToTitle()">Toggle CLass Title</button>
+    <button class="btn btn-primary" onclick="changeUrls()">Change Link Address</button>
+    <button class="btn btn-secondary" onclick="addToTheSecond()">Add Item To list</button> <!-- not working-->
+    <button class="btn btn-warning" onclick="addParagraph()">Add Paragraph</button>
+    <button class="btn btn-dark" onclick="firstUlDisappear()">Hide First UL</button>
+    <button class="btn btn-success" onclick="paintItGreen()">BG Green UL</button>
+    <button class="btn btn-primary" onclick="makeItClickable()">Change Header Color</button>
+    <button class="btn btn-danger" onclick="changeFooterText()">Change Footer</button>
+    <button class="btn btn-secondary" onclick="inputField()">Input Field</button>
+
+  </header>
+
+  <main>
+    <hr />
+    <ul id="firstList">
+      <li>1st</li>
+      <li>2nd</li>
+      <li>3rd</li>
+    </ul>
+
+    <ul id="secondList">
+      <li>1st</li>
+      <li>2nd</li>
+      <li>3rd</li>
+    </ul>
+
+    <a href="strive.school">This link goes to Strive School</a>
+
+    <div>
+      <p>This text is just for the exercise</p>
+    </div>
+
+    <div>
+      <input type="text" id="input-field" placeholder="input field for the exercise" />
+    </div>
+  </main>
+
+  <footer onclick="changeFooterText()">
+    <p>And this text is just for the exercise too!</p>
+  </footer>
+</body>
+<script src="main.js"></script>
+
+</html>

@@ -4,7 +4,7 @@
  This Contains Module 1 JavaScript HTML CSS
 
 # D3
--Intro to JavaScript
+* Intro to JavaScript
 - create + call  implement simple math functions 
 - creating + copying Objects & Arrays
 - Removing from objects and Arrays

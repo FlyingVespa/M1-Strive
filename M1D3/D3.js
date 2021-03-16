@@ -192,8 +192,12 @@ Store in a variable totalCars the number of cars present in both carsForSale and
 
 /* WRITE YOUR CODE HERE */
 
-
-let carsForSale = [carsArr[1], carsArr[3], carsArr[4]]
+let _carsForSale = [carsArr[1], carsArr[3], carsArr[4]]
+const carsForSale = {
+    car1: carsArr[1],
+    car3: carsArr[3],
+    car4: carsArr[4],
+}
 let totalCars = carsForSale.length
 
 console.log("Listed cars with details");
@@ -206,7 +210,7 @@ console.log("----------------------------> 13")
 /* EXERCISE 13
 Print in the console the data from each car in the carsForSale array.
 */
-console.log(...carsForSale)
+console.log(carsForSale)
 // want it to log {
 /*
     {

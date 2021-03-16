@@ -27,7 +27,7 @@ console.log(test);
 */
 console.log("-----------------> B")
 
-let sum = (10+20);
+let sum = (10 + 20);
 console.log(sum);
 
 /* Ex.C 
@@ -35,7 +35,7 @@ console.log(sum);
 */
 console.log("-----------------> C")
 
-let random = function(min, max) {
+let random = function (min, max) {
 
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -43,7 +43,7 @@ let random = function(min, max) {
   return Math.floor(Math.random() * (max - min) + min)
 
 };
- let newRandom = random(1,20);
+let newRandom = random(1, 20);
 
 console.log(newRandom);
 
@@ -66,7 +66,7 @@ console.log(me);
 */
 console.log("-----------------> E");
 console.log(" Age property removed ");
-let removeKey = function(me) {
+let removeKey = function (me) {
 
   delete me.age;
   return me;
@@ -79,9 +79,11 @@ console.log(me);
 */
 console.log("-----------------> F");
 console.log(" Property 'skills'added with value ");
-let addKey = function(s) {
-    Object.assign(s,{skills : ["React", "Html", "CSS"]});
-    return s;
+let addKey = function (s) {
+  Object.assign(s, {
+    skills: ["React", "Html", "CSS"]
+  });
+  return s;
 }
 addKey(me);
 console.log(me);
@@ -92,7 +94,7 @@ console.log(me);
 console.log("-----------------> G");
 console.log(" The last value of skills removed. ");
 
-let removeOneValueOfKey = function() {
+let removeOneValueOfKey = function () {
   let skillsValue = me.skills
   skillsValue.pop();
   return;
@@ -108,12 +110,12 @@ console.log(me);
 
 console.log("-----------------> Ex 1");
 
-let dice = function(min,max) {
+let dice = function (min, max) {
   min = Math.ceil(1);
   max = Math.floor(6);
   return Math.floor(Math.random() * (max - min) + min)
 }
-
+console.log("Random dice roll envoked");
 console.log(dice());
 
 /* Ex.2 
@@ -121,18 +123,19 @@ console.log(dice());
 */
 console.log("-----------------> Ex 2");
 
-let whoIsBigger = function(numberOne, numberTwo){
+let whoIsBigger = function (numberOne, numberTwo) {
 
-  if (numberOne > numberTwo){
+  if (numberOne > numberTwo) {
     console.log(`${numberOne} is the biggest`)
   } else if (numberTwo > numberOne) {
     console.log(`${numberTwo} is the biggest`)
-  } else if (numberOne === numberTwo){
+  } else if (numberOne === numberTwo) {
     console.log(`${numberOne} and ${numberTwo} are equal`)
   }
-  return; 
 };
-console.log(whoIsBigger(5,6));
+
+console.log("Two numbers compared and prints the biggest");
+console.log(whoIsBigger(5, 6));
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
@@ -142,10 +145,10 @@ console.log(whoIsBigger(5,6));
 console.log("-----------------> Ex 3");
 
 let orignalString = "I Love Coding";
-let splitMe = function(par) {
+let splitMe = function (par) {
   let arrString = orignalString.split(" ");
   return arrString;
- };
+};
 
 console.log(splitMe());
 
@@ -157,10 +160,10 @@ console.log("-----------------> Ex 4");
 
 let string = "Rome was not buildt in a day.";
 
-let deleteOne = function(string,parameter) {
-  if(parameter === true){
+let deleteOne = function (string, parameter) {
+  if (parameter === true) {
     str = string.slice(1);
-   return str;
+    return str;
   } else {
     console.log(string);
   }
@@ -177,12 +180,12 @@ console.log(deleteOne(string, true));
 
 console.log("-----------------> Ex 5");
 let oldSentance = "This sentence contains 1 number and 5 cats."
-let onlyLetters = function(sentance) {
-  
+let onlyLetters = function (sentance) {
+
   sentance = oldSentance.replace(/[0-9]/g, '');
   return sentance;
 }
-let withoutNumbers= onlyLetters(oldSentance);
+let withoutNumbers = onlyLetters(oldSentance);
 console.log(withoutNumbers);
 
 
@@ -191,16 +194,13 @@ console.log(withoutNumbers);
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 console.log("-----------------> Ex 6");
-/* REGEX METHOD - not known yet
-let isThisAnEmail = function(){
-  return /\S+@\S+\.\S+/.test(email)
-}
-isThisAnEmail(mail@gmail.com) */
 
 function testEmailAddress(emailToTest) {
   // check for @
   let atSymbol = emailToTest.indexOf("@");
-  if(atSymbol < 1) return false;
+  if (atSymbol < 1) return false;
+  // if(atSymbol < 1 // atSymbol > 2) return false;;
+  // if(atSymbol !== 1) return false;
 
   let dot = emailToTest.indexOf(".");
   if (dot <= atSymbol + 2) return false;
@@ -210,10 +210,13 @@ function testEmailAddress(emailToTest) {
 
   return true;
 }
-let emailToTest = "isthiswork@inggmail.com";
-console.log(testEmailAddress(emailToTest));
+let correctEmail = "yes@gmail.com";
+let wrongEmail = "thisnot@@working.com";
 
-// to check amount of @
+console.log("Valid Email:");
+console.log(testEmailAddress(correctEmail));
+console.log("Invalid Email:");
+console.log(testEmailAddress(wrongEmail));
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
@@ -221,10 +224,10 @@ console.log(testEmailAddress(emailToTest));
 console.log("-----------------> Ex 7");
 
 
-let whatDayIsIt = function() {
-var day = new Date()
-const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-return days[day.getDay()];
+let whatDayIsIt = function () {
+  var day = new Date()
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  return days[day.getDay()];
 };
 let todayIs = whatDayIsIt();
 console.log(todayIs);
@@ -300,15 +303,15 @@ let todayDateIs = new Date;
 
 // parse the dates
 // split() the time, last 
-let isTodayMyBirthday = function(a,b){
+let isTodayMyBirthday = function (a, b) {
 
-  if(a == b){
+  if (a == b) {
     return true;
   } else {
     return false;
   }
-   //myBirthday !== todayDateIs ?  false : true;
-   
+  //myBirthday !== todayDateIs ?  false : true;
+
 };
 
 console.log(isTodayMyBirthday(myBirthday, todayDateIs));
@@ -407,117 +410,102 @@ console.log("-----------------> Ex 20");
 */
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
-const movies = [
-  {
+const movies = [{
     Title: "The Lord of the Rings: The Fellowship of the Ring",
     Year: "2001",
     imdbID: "tt0120737",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
   },
   {
     Title: "The Lord of the Rings: The Return of the King",
     Year: "2003",
     imdbID: "tt0167260",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
   },
   {
     Title: "The Lord of the Rings: The Two Towers",
     Year: "2002",
     imdbID: "tt0167261",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
   },
   {
     Title: "Lord of War",
     Year: "2005",
     imdbID: "tt0399295",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
   },
   {
     Title: "Lords of Dogtown",
     Year: "2005",
     imdbID: "tt0355702",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg",
   },
   {
     Title: "The Lord of the Rings",
     Year: "1978",
     imdbID: "tt0077869",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
   },
   {
     Title: "Lord of the Flies",
     Year: "1990",
     imdbID: "tt0100054",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg",
   },
   {
     Title: "The Lords of Salem",
     Year: "2012",
     imdbID: "tt1731697",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg",
   },
   {
     Title: "Greystoke: The Legend of Tarzan, Lord of the Apes",
     Year: "1984",
     imdbID: "tt0087365",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg",
   },
   {
     Title: "Lord of the Flies",
     Year: "1963",
     imdbID: "tt0057261",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg",
   },
   {
     Title: "The Avengers",
     Year: "2012",
     imdbID: "tt0848228",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
   },
   {
     Title: "Avengers: Infinity War",
     Year: "2018",
     imdbID: "tt4154756",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
   },
   {
     Title: "Avengers: Age of Ultron",
     Year: "2015",
     imdbID: "tt2395427",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
   },
   {
     Title: "Avengers: Endgame",
     Year: "2019",
     imdbID: "tt4154796",
     Type: "movie",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
+    Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ]
