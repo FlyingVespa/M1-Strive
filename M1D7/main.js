@@ -22,12 +22,12 @@ const addClassToTitle = function () {
     } //
 };
 
-/* EXERCISE 3
+/* EXERCISE 3 ---------------------------- WORKS
 Write a function for changing the text of only the p which are children of a div.
 */
 
 const changePcontent = function () {
-
+    document.querySelector("div p").innerHTML = "Content for only the p has changed";
     //
 };
 
@@ -56,9 +56,9 @@ Write a function for adding a second paragraph to the div.
 */
 
 const addParagraph = function (content) {
-    document.getElementsByTagName("div")[0].innerHTML =
-        "Lorem ipsum dolor sit amet consectetur adipisicing elitTotam accusamus itaque cumque dolore dolor repudiandae commodi"
-
+    let newP = document.createElement("p")
+    newP.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elitTotam accusamus itaque cumque dolore dolor repudiandae commodi";
+    document.getElementsByTagName("div")[0].appendChild(newP);
 
 };
 
@@ -72,7 +72,7 @@ const firstUlDisappear = function () {
     //
 };
 
-/* EXERCISE 8
+/* EXERCISE 8 ---------------------------- WORKS
 Write a function for making the background of every UL green.
 */
 const paintItGreen = function () {
@@ -83,19 +83,22 @@ const paintItGreen = function () {
 
 };
 
-/* EXERCISE 9
+/* EXERCISE 9 
 Make the heading of the page change color every time the user clicks on it.
 */
 
 const makeItClickable = function () {
-    let newHeaderColor = document.getElementsByTagName("h1")
-    let colors = ['red', 'blue', 'green', 'teal'];
-
-    for (i = 0; i < newHeaderColor.length; i++) {
+    let colors = ['red', 'blue', 'green'];
+    let header = document.querySelector("header").children;
+    for (i = 0; i < header.length; i++) {
         // Pick a random color from the array 'colors'.
-        let newHeaderColor = newHeaderColor.style;
+        let header = header[i].style;
         let randomColorIndex = Math.floor(Math.random() * colors.length);
-        newHeaderColor.color = colors[randomColorIndex];
+
+        header.color = colors[randomColorIndex];
+        header.width = '100px';
+        header.height = '100px';
+        header.display = 'inline-block';
     }
     //
 };
@@ -105,6 +108,8 @@ Change the footer text with something else when the user clicks on it.
 */
 
 const changeFooterText = function () {
+    let footText = document.getElementsByTagName("footer")
+    footText.innerHTML = ("pointer")
     //
 };
 
