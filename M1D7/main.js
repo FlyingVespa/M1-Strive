@@ -103,13 +103,13 @@ const makeItClickable = function () {
     //
 };
 
-/* EXERCISE 10
+/* EXERCISE 10  ---------------------------- WORKS
 Change the footer text with something else when the user clicks on it.
 */
-
+let footText = document.querySelector("footer p")
+footText.style.cursor = "pointer";
 const changeFooterText = function () {
-    let footText = document.getElementsByTagName("footer")
-    footText.innerHTML = ("pointer")
+    footText.innerHTML = "The Footer Text has Changed";
     //
 };
 
@@ -120,14 +120,15 @@ Attach an event listener to the input field in the page for console logging its 
 const inputField = document.getElementById("input-field");
 // ...
 
-/* EXERCISE 12
+/* EXERCISE 12  ---------------------------- WORKS
 Create a new welcome alert message when the page successfully loads.
 */
 
 window.onload = function () {
+    alert("Page has reload and is ready!")
     //
 };
 
-/* EXERCISE 13
+/* EXERCISE 13  ---------------------------- WORKS
 Use HTML5 tags to divide the content of the page in a more semantic way.
 */
