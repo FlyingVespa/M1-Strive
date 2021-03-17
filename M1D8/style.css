@@ -1,18 +1,41 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  background-color: grey;
+}
+
+form {
+  padding: 50px;
+  background-color: #fff;
+}
+.header {
+  display: flex;
+  margin-top: 10vh;
+  justify-content: center;
+}
+
+.header h1 {
+  position: absolute;
+  text-transform: uppercase;
+}
 .taskList {
   display: flex;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
   justify-content: center;
-  border: blue 2px solid;
-
   width: 50%;
-
   height: 50%;
   min-width: 300px;
-  min-height: 800px;
+  box-shadow: 2px 2px 15px grey;
+  border-radius: 10px;
 }
 
 .fas {
@@ -20,10 +43,61 @@
 }
 
 .fas .fa-plus-square {
+  flex: auto;
   width: 50px;
   size: 20px;
+  float: right;
+}
+i {
+  margin: 5px;
+  justify-content: center;
+  float: right;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  height: 5vh;
+  margin-top: 50px;
+  margin-bottom: 0;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.add {
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: start;
+  flex: 2;
+}
+
+li {
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  flex: 1;
+  border: none;
+  box-shadow: 1px 1px 5px grey;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.form-control .input-bar {
+  flex: 1;
+  margin: 10px;
+  width: 100px;
+}
+
+.add-task {
+  flex: 1;
+  margin-left: 10px;
 }

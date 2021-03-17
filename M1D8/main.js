@@ -8,16 +8,16 @@ const list = document.querySelectorAll(".tasks li");
 let listLength = list.lenght;
 
 const generateNewTask = function (task) {
-  const document = ` <div class="card">
+  const document = `
                     <li>
                   <input type="checkbox" id="task">
                   <label for="task">
                     <span class="check"></span>
                     ${task}
                   </label>
-                  <i class="fas fa-minus-square delete" style="color: rgb(149, 7, 7) "></i>
+                  <i class="fas fa-minus-square delete fa-lg" style="color: rgb(149, 7, 7) "></i>
                 </li>
-                </div>`;
+               `;
   taskList.innerHTML += document;
 };
 

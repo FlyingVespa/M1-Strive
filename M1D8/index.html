@@ -20,40 +20,42 @@
   </head>
 
   <body>
+    <div class="header">
+      <h1>TaskList Creator</h1>
+    
     <div class="taskList">
       <div class="content">
         <form class="add">
           <input
             type="text"
-            class="form-control"
+            class="form-control input-bar"
             name="add"
             placeholder="Enter New Task..."
           />
-          <div class="input-buttons">
-            <input
-              type="button"
-              value="add task"
-              class="btn btn-warning add-task"
-            />
-          </div>
+          <input
+            type="button"
+            value="Add Task"
+            class="btn btn-warning add-task"
+          />
         </form>
         <ul class="tasks align">
-          <div class="card">
-            <li>
-              <input type="checkbox" id="task_1" />
-              <label for="task_1">
-                <span class="check"></span>
-                This is the First Task on document reload
-              </label>
-              <i
-                class="fas fa-minus-square delete"
-                style="color: rgb(149, 7, 7)"
-              ></i>
-            </li>
-          </div>
+          <li>
+            <input type="checkbox" id="task_1" />
+            <label for="task_1">
+              <span class="check"></span>
+              This is the First Task on document reload
+            </label>
+            <i
+              class="fas fa-minus-square delete fa-lg"
+              style="color: rgb(149, 7, 7)"
+            ></i>
+          </li>
         </ul>
       </div>
     </div>
   </body>
+  <footer>
+    <div>Task List Created by:</div>
+  </footer>
   <script src="main.js"></script>
 </html>
