@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.taskList {
+  display: flex;
+  justify-content: center;
+  border: blue 2px solid;
+
+  width: 50%;
+
+  height: 50%;
+  min-width: 300px;
+  min-height: 800px;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.fas .fa-plus-square {
+  width: 50px;
+  size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
