@@ -9,6 +9,29 @@ console.log(createCells);
 const newBingoCard = document.querySelector(".bingocards");
 let lotto = "";
 
+//gen a randomNumber
+let randomNumber = function (min, max) {
+
+    min = Math.ceil(min);
+    max = Math.floor(max);
+  
+    return Math.floor(Math.random() * (max - min) + min)
+  
+  };
+  let bingGeneratedNumber = randomNum(1, 76);
+
+  
+  //compare random number with existing number
+  for(i=0 ; i < genCells.length; i++ )
+
+if (bingGeneratedNumber === numberincell){
+    e.target.getElementById("cell"{
+        change its style function
+
+    })
+}
+
+
 let gen = function () {
 for (let i = 0; i < createCells.length; ++i) {
   genCells[i] = Math.ceil(Math.random() * 100);

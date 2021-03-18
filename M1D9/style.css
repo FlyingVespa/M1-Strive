@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300&display=swap");
 body {
   font-family: Poppins, serif;
   background-color: white;
@@ -14,8 +14,18 @@ h1 {
 
 table {
   border-collapse: collapse;
+  table-layout: fixed;
+  width: 25%;
 }
-
+tr {
+  background-color: #f1f1f1ff;
+  font-family: Bangers, serif;
+  font-size: 30px;
+  margin: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  line-height: 40px;
+}
 th,
 td,
 tr {
@@ -38,7 +48,7 @@ tr {
   color: #fff;
   border: none;
   box-shadow: 1 px 2px 3px gray;
-  margin: 5px;
+  margin: 20px;
   padding: 10px;
   font-size: 16px;
   border-radius: 3px;
