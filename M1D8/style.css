@@ -10,94 +10,29 @@ body {
   background-color: grey;
 }
 
-form {
-  padding: 50px;
-  background-color: #fff;
-}
-.header {
-  display: flex;
-  margin-top: 10vh;
-  justify-content: center;
-}
-
-.header h1 {
-  position: absolute;
-  text-transform: uppercase;
-}
-.taskList {
-  display: flex;
-  margin-top: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  justify-content: center;
-  width: 50%;
-  height: 50%;
-  min-width: 300px;
-  box-shadow: 2px 2px 15px grey;
-  border-radius: 10px;
-}
-
-.fas {
-  cursor: pointer;
-}
-
-.fas .fa-plus-square {
-  flex: auto;
-  width: 50px;
-  size: 20px;
-  float: right;
-}
-i {
+#btn {
+  color: #fff;
+  border: none;
   margin: 5px;
-  justify-content: center;
-  float: right;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer {
-  height: 5vh;
-  margin-top: 50px;
-  margin-bottom: 0;
-  background-color: #fff;
   padding: 10px;
-  text-align: center;
-  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  font-weight: 700;
 }
 
-.add {
-  width: 40vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: start;
-  flex: 2;
+.btn:hover {
+  transform: scaleY(1.1) scaleX(1.1);
+}
+
+#newTask {
+  margin: 10px;
+  width: 30%;
+  font-size: 16px;
 }
 
 li {
-  position: relative;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-  flex: 1;
-  border: none;
-  box-shadow: 1px 1px 5px grey;
-  font-size: 18px;
-  background-color: #fff;
-}
-
-.form-control .input-bar {
-  flex: 1;
-  margin: 10px;
-  width: 100px;
-}
-
-.add-task {
-  flex: 1;
-  margin-left: 10px;
 }
