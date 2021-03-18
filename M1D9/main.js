@@ -4,18 +4,23 @@ const createCells = new Array(76);
 const genCells = [];
 console.log(createCells);
 // assign variables to the classes (grab from DOM)
-const addNewCard = document.querySelector(".plus");
-const deleteLastCard = document.querySelector(".delete");
-const lotto = "";
+//const addNewCard = document.querySelector(".plus");
+//const deleteLastCard = document.querySelector(".delete");
+const newBingoCard = document.querySelector(".bingocards");
+let lotto = "";
 
+let gen = function () {
 for (let i = 0; i < createCells.length; ++i) {
   genCells[i] = Math.ceil(Math.random() * 100);
   if (i === 0) {
-    lotto;
+    lotto = lotto + genCells[i];
+  } else {
+    lotto += "-" + genCells[i];
   }
-}
+};
+console.log(gen());
 
-const generateNewCard = function (card) {
+const generateNewCard = function (e) {
   const document = `
     <div class="bingocard">
     <table>
@@ -64,8 +69,12 @@ const generateNewCard = function (card) {
     </table>
   </div>
                  `;
-  taskList.innerHTML += document;
+  newBingoCard.innerHTML += document;
 };
+
+// function to add new card, append to div.bingocards
+
+// function to compare computer card vs player card
 
 // DeleteCard
 const deleteCard = function (e) {
@@ -73,3 +82,19 @@ const deleteCard = function (e) {
     e.target.classList.remove("bingocard");
   }
 };
+
+const addTasks = function (e) {
+    e.preventDefault();
+    const task = submitForm.add.value;
+    if (task.length > 0) {
+      generateNewTask(task);
+      submitForm.reset();
+    }
+  };
+
+  var el = document.getElementById('bingocards');
+  var body = document.getElementsByTagName('body');
+  el.innerHTML = '<p><a id="clickme" href="#">Click me</a></p>';
+  document.getElementById('clickme').onclick = function (e) {
+      e.preventDefault();
+      document.body.innerHTML += generateNewCard()
