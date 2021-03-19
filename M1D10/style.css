@@ -1,0 +1,71 @@
+/* Imported Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&family=Manjari&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Alatsi, serif;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+table {
+  border-collapse: collapse;
+  border: black 5px solid;
+}
+
+th,
+td,
+tr {
+  margin: 5px;
+  padding: 10px;
+}
+td {
+  border: green 2px solid;
+}
+
+tr {
+  border: dotted red;
+}
+
+td img {
+  width: 100px;
+  height: 100px;
+}
+
+#footer-container h3 {
+  font-family: serif;
+}
+
+h1 {
+  text-align: center;
+}
+p {
+  margin: 10px;
+}
+.paragraph {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+a {
+  background-color: ;
+  color: rgb(199, 90, 1);
+}
+table {
+  border-radius: 5px;
+}
+
+#heading,
+ul {
+  cursor: pointer;
+}

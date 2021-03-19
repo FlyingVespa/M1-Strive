@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    </body>
+    </html>
+    <!--HTML 1) Create a title for the page-->
+    <title>This Is A Title</title>
+</head>
+<!--HTML 2) Create a heading--->
+<h1 id="heading" onclick="changeHeading()">This is a heading</h1>
+<body>
+    <!--HTML 3) Create an ordered list--->
+    <ol>
+        <li>ordered list containing one listed item</li>
+    </ol>
+    <!--HTML 4)  Create a table with 5 columns and 4 rows-->
+     <!--I ommitted thead and tbody etc as there wasn't clear instruction-->
+ <table onclick="newRow()">
+       <tr>
+        <td colspan="1">1</td>
+        <td colspan="1"><img  href="#1"src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tourism_in_London795.jpg/800px-Tourism_in_London795.jpg" alt="image1"></a></td>
+        <td colspan="1"><a id="link1"  href="https://en.wikipedia.org/wiki/Photograph">Link 1</a></td>
+        <td colspan="1">1</td>
+        <td colspan="1">1</td>
+      </tr>
+    
+      <tr>
+        <td colspan="1">2</td>
+        <td colspan="1"><img href="#2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TEIDE.JPG/1920px-TEIDE.JPG" alt="image2"></a></td>
+        <td colspan="1"><a id="link2" href="https://en.wikipedia.org/wiki/Photograph">Link 2</a></td>
+        <td colspan="1">2</td>
+        <td colspan="1">2</td>
+      </tr>
+      <tr>
+        <td colspan="1">3</td>
+        <td colspan="1"><img href="#3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png" alt="image3"></a></td>
+        <td colspan="1"><a id="link3" href="https://en.wikipedia.org/wiki/Photograph">Link 3</a></td>
+        <td colspan="1">3</td>
+        <td colspan="1">3</td>
+      </tr>
+      <tr class="dotted">
+        <td colspan="1">4</td>
+        <td colspan="1"><img href="#4" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Nic%C3%A9phore_Ni%C3%A9pce_Oldest_Photograph_1825.jpg" alt="image4"></a></td>
+        <td colspan="1"><a id="link4" href="https://en.wikipedia.org/wiki/Photograph">Link 4</a></td>
+        <td colspan="2">This Cell is merged</td>
+      </tr>
+       </table>
+       <br>
+<hr>
+<br>
+<div class="container">
+    <p class="paragraph">This is a paragraph with a < p > element <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Cum sunt sint harum fugiat quidem quia esse magnam rem! Commodi
+         cumque nemo qui fugit optio quis sunt veniam placeat et quasi.</>
+   <ul onclick="addNewItem()">
+       <li>this is listed under ul</li>
+       <li>this is listed under ul</li>
+       <li>this is listed under ul</li>
+       <li>this is listed under ul</li>
+   </ul>
+   <input type="button" value="Remove List" onclick="removeList()">
+   
+</div>
+<br>
+    <hr>
+    <script src="main.js"></script>
+</body>
+<footer>
+    <div id="footer-container">
+        <h3 ><strong>Page Creator: </strong> <span>Hedri Nel</h3>
+        <span>This page was created by Hedri Nel.</span><br>
+        <span>Currently Living in Italy</span><br>
+        <span>Native Langueage is <em>Afrikaans</em></span>
+        <p class="hidden">This is a hidden element</p>
+        </div>
+    <hr>
+   
+</footer>
+
+</html>
