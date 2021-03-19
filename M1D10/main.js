@@ -139,7 +139,29 @@ function removeList() {
 }
 
 //41
-let link = document.getElementsByTagName("a");
-link.hover = function () {
+function hoverEvent() {
   alert("You hovered on a link");
-};
+}
+
+//42
+function hideImg() {
+  let imgToggle = document.querySelectorAll("img");
+  for (let i = 0; i < imgToggle.length; i++) {
+    if (imgToggle[i].style.visibility === "hidden") {
+      imgToggle[i].style.visibility = "visible";
+    } else {
+      imgToggle[i].style.visibility = "hidden";
+    }
+  }
+}
+
+function hideTable() {
+  let theTable = document.getElementById("table");
+  for (let i = 0; i < imgToggle.length; i++) {
+    if (theTable[i].style.display === "none") {
+      theTable[i].style.display = "block";
+    } else {
+      theTable[i].style.display = "none";
+    }
+  }
+}
