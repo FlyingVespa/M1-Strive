@@ -62,7 +62,7 @@ function arrayCompareLenght() {
   } else if (array1.length > array2.length) {
     console.log("array1 is longer than array2");
   } else if (array1.length == array2.length) {
-    console.log("They are equel in lenght");
+    console.log("They are equel in length");
   }
 }
 console.log(arrayCompareLenght());
@@ -126,7 +126,7 @@ window.onload = function () {
 //39
 let ulName = document.querySelector("ul");
 let liItem = document.createElement("LI");
-const addNewItem = function (content) {
+const addNewItem = function () {
   liItem.innerHTML = "And something here";
   ulName.appendChild(liItem);
   //
@@ -155,6 +155,7 @@ function hideImg() {
   }
 }
 
+//43
 function hideTable() {
   let theTable = document.getElementById("table");
   for (let i = 0; i < imgToggle.length; i++) {
@@ -165,3 +166,39 @@ function hideTable() {
     }
   }
 }
+
+//44
+//put all cells in array
+// itirate through array to pull all numbers (type of) /0-9/g ...
+// put the numbers in new array
+// add upp through a function
+// log the result
+
+//45
+//create an array spliting each letter
+// function with do a for loop
+// in for loop do delete
+// call function with button click
+
+//46
+// create an eventlistner on click { do toggle function for background of td element}
+// add a classlist on selected item (this will give collor), with a toggle mode
+
+//47
+// create a random math function between min and max td
+// create an array of td
+// if result of math function  === to the array index {
+//    delete that td element.}
+// this should trigger on button "delete" when clicked
+
+//48
+// create an eventlistenr for hover
+// create add style border red with 1px or do toggle fucntion by adding removing class on hover?
+// toggle pink border
+
+//49
+
+//50
+// copy logic from question 43, but use querySelectorAll with for loop
+// that iitaarates through alll
+// then init a delete function (last elemnt until == 0) on button click.

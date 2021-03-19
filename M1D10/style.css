@@ -1,6 +1,15 @@
 /* Imported Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alatsi&family=Manjari&display=swap");
+/*INDEX
+
+1.Table Styling
+2. Heading Style
+3. ol + ul style
+4. button styling
+5. Footer Styling
+
+*/
 
 * {
   margin: 0;
@@ -13,7 +22,7 @@ body {
   margin-right: auto;
   width: 75%;
 }
-
+/* -------------- 1. Table Stylings --------------*/
 table {
   border-collapse: collapse;
   border: black 5px solid;
@@ -38,12 +47,9 @@ td img {
   height: 100px;
 }
 
-#footer-container h3 {
-  font-family: serif;
-}
-
 h1 {
   text-align: center;
+  text-transform: uppercase;
 }
 p {
   margin: 10px;
@@ -61,17 +67,18 @@ a {
   background-color: ;
   color: rgb(199, 90, 1);
 }
-table {
-  border-radius: 5px;
-}
 
+/* -------------- Heading --------------*/
 #heading,
 ul {
   cursor: pointer;
 }
+
+/* -------------- Button --------------*/
+
 input[type="button"] {
   font-size: 20px;
-  margin: 2px;
+  margin: 5px;
   padding: 5px;
   border-radius: 3px;
   cursor: pointer;
@@ -80,4 +87,17 @@ input[type="button"] {
 input[type="button"]:hover {
   transform: scaleX(1.1) scaleY(1.1);
   box-shadow: 1px 2px 5px black;
+}
+ol {
+  margin: 20px;
+}
+/* -------------- Footer --------------*/
+
+footer {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  color: #111010;
+  font-family: serif;
+  background: #f2f2f2;
 }
