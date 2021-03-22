@@ -18,11 +18,12 @@
 <br>
 <hr>
 <br>
-
 <body>
     <input type="button" value="Hide all Images" onclick="hideImg()">
     <input type="button" value="Hide the Table" onclick="hideTable()">
     <input type="button" value="Remove Unordered List" onclick="removeList()">
+    <input type="button" value="Add Red Link" onclick="changeBackGroundRed()">
+
 
     <!--HTML 3) Create an ordered list--->
     <br>
@@ -65,31 +66,31 @@
             <td colspan="1">3</td>
             <td colspan="1">3</td>
         </tr>
-        <tr class="dotted">
+        <tr  class="dotted">
             <td colspan="1">4</td>
             <td colspan="1"><img class="hideImg" href="#4"
                     src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Nic%C3%A9phore_Ni%C3%A9pce_Oldest_Photograph_1825.jpg"
                     alt="image4"></a></td>
             <td colspan="1"><a id="link4" onmouseover="hoverEvent()"
                     href="https://en.wikipedia.org/wiki/Photograph">Link 4</a></td>
-            <td colspan="2">This Cell is merged</td>
+            <td colspan="2" >This Cell is merged</td>
         </tr>
     </table>
     <br>
     <hr>
     <br>
     <div class="container">
-        <p class="paragraph">This is a paragraph with a < p> element <br>
+        <p class="paragraph"><u>This is a paragraph with a "p" element</u> <br>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Cum sunt sint harum fugiat quidem quia esse magnam rem! Commodi
-                cumque nemo qui fugit optio quis sunt veniam placeat et quasi.</>
-            <ul onclick="addNewItem()">
+                cumque nemo qui fugit optio quis sunt veniam placeat et quasi.</p>
+                <br>
+            <ul id="list" onclick="addToList()">
                 <li>Click this to add Another 'li'</li>
                 <li>Click this to add Another 'li'</li>
                 <li>Click this to add Another 'li'</li>
             </ul>
-
-
+            <br>
     </div>
     <hr>
     <footer>
@@ -99,7 +100,8 @@
         <span>Native Langueage is <em>Afrikaans</em></span>
         <p class="hidden">This is a hidden element</p>
     </footer>
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
+
 
 </html>

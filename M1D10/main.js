@@ -112,38 +112,45 @@ function addTestClass() {
 }
 addTestClass();
 
-//37 bg can be added in css...
+//37  Write a function to add a red background to every link in the page
+/* ???? Not working
+let changeBackGroundRed = function() {
+  let links = document.getElementsByTagName("a").innerHTML;
+  for (let i = 0; i < links.length; i++) {
+    if (links[i].style.color === "red") {
+        links[i].style.color = "white";
+    } else {
+        links[i].style.color = "red";
+    }
+}
+*/
+//38  Console log "Page loaded" when the page is correctly loaded
 
-function addRegBg() {
-  let link = document.querySelectorAll[s]("a");
+window.onload = (e) => {
+  console.log("Page Loaded Successfully");
+};
+//39 Write a function to add new items to a UL
+
+function addToList() {
+  let ul = document.getElementById("list");
+  let li = document.createElement("li");
+
+  li.appendChild(document.createTextNode("New listed Item Created"));
+  ul.appendChild(li);
 }
 
-//38
-window.onload = function () {
-  console.log("page loaded");
-};
-
-//39
-let ulName = document.querySelector("ul");
-let liItem = document.createElement("LI");
-const addNewItem = function () {
-  liItem.innerHTML = "And something here";
-  ulName.appendChild(liItem);
-  //
-};
-
-//40
+//40 Write a function to empty a list
 function removeList() {
   for (let i = 0; i < liItem.length; i++) {}
-  liItem.pop();
+  return liItem.pop();
 }
 
-//41
+//41 Add an eventListener to alert when the mouse is over a link, displaying the URL
 function hoverEvent() {
   alert("You hovered on a link");
 }
 
-//42
+//42 Add a button to hide every image on the page
 function hideImg() {
   let imgToggle = document.querySelectorAll("img");
   for (let i = 0; i < imgToggle.length; i++) {
@@ -155,10 +162,11 @@ function hideImg() {
   }
 }
 
-//43
+//43 Add a button to hide and show the table from the page
 function hideTable() {
-  let theTable = document.getElementById("table");
-  for (let i = 0; i < imgToggle.length; i++) {
+  let theTable = document.querySelector("table");
+
+  for (let i = 0; i < theTable.length; i++) {
     if (theTable[i].style.display === "none") {
       theTable[i].style.display = "block";
     } else {
@@ -167,9 +175,10 @@ function hideTable() {
   }
 }
 
+/*
 //44
 //put all cells in array
-// itirate through array to pull all numbers (type of) /0-9/g ...
+// itirate through array to pull all numbers type of /0-9/g 
 // put the numbers in new array
 // add upp through a function
 // log the result
@@ -181,14 +190,14 @@ function hideTable() {
 // call function with button click
 
 //46
-// create an eventlistner on click { do toggle function for background of td element}
-// add a classlist on selected item (this will give collor), with a toggle mode
+// create an eventlistner on click  do toggle function for background of td element
+// add a classlist on selected item this will give collor, with a toggle mode
 
 //47
 // create a random math function between min and max td
 // create an array of td
-// if result of math function  === to the array index {
-//    delete that td element.}
+// if result of math function  === to the array index 
+//    delete that td element.
 // this should trigger on button "delete" when clicked
 
 //48
@@ -201,4 +210,5 @@ function hideTable() {
 //50
 // copy logic from question 43, but use querySelectorAll with for loop
 // that iitaarates through alll
-// then init a delete function (last elemnt until == 0) on button click.
+// then init a delete function last elemnt until = 0 on button 
+*/
