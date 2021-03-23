@@ -50,7 +50,7 @@ let maxArray = Math.max(...savedRandomNumbers);
 console.log(minArray);
 console.log(maxArray);
 
-//28 Create an array of arrays, in which every array has 10 random numbers
+//28 Create an array of arrays, in which every array has 10 random numbers --> DONE
 
 console.log("//------------------- Ex 28 -------------------//");
 
@@ -65,7 +65,7 @@ for (let j = 0; j < 10; j++) {
 }
 console.log(rootArray);
 
-//29 Create a function that gets 2 arrays and returns the longest one
+//29 Create a function that gets 2 arrays and returns the longest one  --> DONE
 
 console.log("//------------------- Ex  29 -------------------//");
 let array1 = [1, 2, 3, 5, 6, 7, 8, 9, 2];
@@ -82,7 +82,7 @@ function arrayCompareLenght() {
 }
 console.log(arrayCompareLenght());
 
-//30 Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+//30 Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values  --> DONE
 
 console.log("//------------------- Ex 30 -------------------//");
 
@@ -104,19 +104,20 @@ function returnLargestSum(a, b) {
 }
 console.log(returnLargestSum(array1, array2));
 
-//31 Get element with ID "container" from the page
+//31 Get element with ID "container" from the page  --> DONE
 
 console.log("//------------------- Ex 31 -------------------//");
-
+/*
 const container = document.getElementById("container");
 console.log(container);
+*/
+//32 Get every "td" from the page  --> DONE
 
-//32 Get every "td" from the page
 console.log("//------------------- Ex 32-------------------//");
-
-const foo = document.querySelectorAll("td");
 /*
-//33 Create a cycle that prints the text inside every td of the page
+const foo = document.querySelectorAll("td");
+
+//33 Create a cycle that prints the text inside every td of the page  --> DONE
 
 console.log("//------------------- Ex 33 -------------------//");
 foo.innerText = "Text text text";
@@ -125,29 +126,48 @@ function printTdText() {
     console.log(foo);
   }
 }
-
-//34 Write a function to change the heading of the page
+*/
+//34 Write a function to change the heading of the page  --> DONE
 
 console.log("//------------------- Ex 34 -------------------//");
-let changeHeading = function (nw) {
+
+function changeHeading() {
   let oldHeading = document.getElementById("heading");
   {
     oldHeading.innerHTML = "The Heading was changed.";
   }
-};
+}
+
 //35 Write a function to add an extra row to the table
-console.log("//------------------- Ex 35-------------------//");
-// click on table to initiate
 /*
 function newRow() {
-  let getRow = document.querySelector("tr");
-  let createTd = document.createElement("td");
+  const grabTr = document.querySelectorAll("tr");
+  const grabTbody = document.querySelectorAll("tbody");
+  for (let i = 0; i < grabTr.length; i++) {
+    const td = document.createElement("td");
+    td.innerText = i + 1;
+    grabTr.appendChild(td);
+  }
+  grabTbody.appendChild(grabTr);
+}
+newRow();
+*/
+console.log("//------------------- Ex 35-------------------//");
+// click on table to initiate
 
-  getRow.appendChild(createTd);
+function newRow() {
+  var table = document.querySelector("table");
+  var row = table.insertCell(0);
+  var column = document.querySelectorAll("tr");
+
+  for (let h = 0; h < column.length; h++) {
+    var cell1 = row.insertRow(h);
+  }
+  cell1.innerHTML = "NEW CELL1";
 }
 
 //36 Write a function to add the class "test" to each row in the table
-  
+/*
 console.log("//------------------- Ex  36-------------------//");
 function addTestClass() {
   let element = document.querySelectorAll("tr");
@@ -156,10 +176,10 @@ function addTestClass() {
   }
 }
 addTestClass();
-
+*/
 //37  Write a function to add a red background to every link in the page
 console.log("//------------------- Ex 37 -------------------//");
- ???? Not working
+/*
 let changeBackGroundRed = function() {
   let links = document.getElementsByTagName("a").innerHTML;
   for (let i = 0; i < links.length; i++) {
@@ -169,16 +189,17 @@ let changeBackGroundRed = function() {
         links[i].style.color = "red";
     }
 }
-
+*/
 //38  Console log "Page loaded" when the page is correctly loaded
 console.log("//------------------- Ex 38 -------------------//");
-
+/*
 window.onload = (e) => {
   console.log("Page Loaded Successfully");
 };
+*/
 //39 Write a function to add new items to a UL
 console.log("//------------------- Ex 39 -------------------//");
-*/
+/*
 function addToList() {
   let ul = document.getElementById("list");
   let li = document.createElement("li");
@@ -186,7 +207,8 @@ function addToList() {
   li.appendChild(document.createTextNode("New listed Item Created"));
   ul.appendChild(li);
 }
-
+*/
+/*
 //40 Write a function to empty a list
 console.log("//------------------- Ex 40 -------------------//");
 function removeList() {
@@ -226,7 +248,7 @@ function hideTable() {
     }
   }
 }
-
+*/
 /*
 //44 console.log("//------------------- Ex 44-------------------//");
 //put all cells in array
