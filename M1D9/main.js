@@ -44,24 +44,18 @@ let randomNumber = function (min, max) {
   
   };
   let bingGeneratedNumber = randomNum(1, 76);
-
-
-
   
   //compare random number with existing number
   for(i=0 ; i < genCells.length; i++ )
 
   let matchingNum = function (e)
 
-
-
-
 if (bingGeneratedNumber === numberincell){
-    e.target.getElementById("cell"){
-       style.backgroundcolor("yellow")
+    e.target.getElementById("cell");
+       style.backgroundcolor("yellow");
 
-    })
-}
+    }
+
 
 
 let gen = function () {
